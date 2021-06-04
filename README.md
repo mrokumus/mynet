@@ -36,3 +36,5 @@ php artisan serve
 > E-posta: mynet@mynet.com
 > 
 > Password: password
+>
+>[Online](http://mynetmedia.fransizcaogren.com/)
