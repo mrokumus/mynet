@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Panel | {{ getenv('APP_NAME') }}</title>
+    <title>@yield('title') | {{ getenv('APP_NAME') }}</title>
+    <link rel="icon" href="//s.mynet.com.tr/favicons/favicon-32x32.png">
     <link rel="stylesheet" href="{{ url('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ url('css/app.css') }}">
+    @yield('css')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
     <!-- Top Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <ul class="navbar-nav ml-auto">
@@ -29,7 +31,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
+        <a href="/dashboard" class="brand-link">
             <img src="https://img7.mynet.com/mynet-logo.png"
                  alt="Mynet" class="brand-image bg-white elevation-3"
                  style="opacity: .8">
@@ -82,11 +84,15 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+       <div class="m-3">
+           @include('views.components.show-error')
+           @include('views.components.show-success')
+       </div>
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    {{ 'CONTENT' }}
+                    @yield('content')
                 </div>
             </div>
         </div>
@@ -109,5 +115,6 @@
 <script src=" {{ url('assets/plugins/jquery/jquery.min.js') }}"></script>
 <script src=" {{ url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src=" {{ url('assets/js/adminlte.min.js') }}"></script>
+@yield('js')
 </body>
 </html>
