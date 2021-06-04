@@ -17,13 +17,12 @@ class Person extends Model
         'gender'
     ];
 
-
     /**
      * Get addresses for the person. (One to many relation)
      * @return HasMany
      */
-    public function getAddresses(): HasMany
+    public function addresses(): HasMany
     {
-        return $this->hasMany(Address::class);
+        return $this->hasMany(Address::class,'person_id','id');
     }
 }
