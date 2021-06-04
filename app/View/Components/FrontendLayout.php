@@ -9,6 +9,7 @@ class FrontendLayout extends Component
 {
     /**
      * Get the view / contents that represents the component.
+     * It's return backend layout view
      *
      * @return View
      */

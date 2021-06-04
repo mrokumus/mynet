@@ -11,15 +11,12 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 
 class PersonController extends Controller
 {
 
     /**
-     * Display a listing of the resource.
+     * Show the table for all persons.
      *
      */
     public function index()
@@ -29,7 +26,7 @@ class PersonController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new person.
      *
      * @return Application|Factory|View
      */
@@ -40,7 +37,7 @@ class PersonController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created person in storage.
      *
      * @param PersonStoreRequest $request
      * @return RedirectResponse
@@ -52,7 +49,7 @@ class PersonController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified person.
      *
      * @param int $id
      * @return Application|Factory|View
@@ -65,7 +62,7 @@ class PersonController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified person in storage.
      *
      * @param PersonUpdateRequest $request
      * @param int $id
@@ -78,7 +75,7 @@ class PersonController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified person from storage.
      *
      * @param int $id
      * @return RedirectResponse

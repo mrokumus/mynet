@@ -11,12 +11,13 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
 
 class AddressController extends Controller
 {
 
     /**
+     * Show the table for all addresses.
+     *
      * @return Application|Factory|View
      */
     public function index()
@@ -26,7 +27,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new address.
      *
      * @return Application|Factory|View
      */
@@ -37,7 +38,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created address in storage.
      *
      * @param AddressStoreRequest $request
      * @return RedirectResponse
@@ -49,7 +50,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified address.
      *
      * @param int $id
      * @return Application|Factory|View
@@ -62,7 +63,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified address in storage.
      *
      * @param AddressUpdateRequest $request
      * @param int $id
@@ -75,7 +76,7 @@ class AddressController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified address from storage.
      *
      * @param int $id
      * @return RedirectResponse

@@ -10,7 +10,18 @@ class Person extends Model
 {
     use HasFactory;
 
+    /**
+     * Define table for this model
+     *
+     * @var string
+     */
     protected $table = 'persons';
+
+    /**
+     * Define fillable columns for Person model's table
+     *
+     * @var string
+     */
     protected $fillable = [
         'name',
         'birthday',
@@ -19,10 +30,11 @@ class Person extends Model
 
     /**
      * Get addresses for the person. (One to many relation)
+     *
      * @return HasMany
      */
     public function addresses(): HasMany
     {
-        return $this->hasMany(Address::class,'person_id','id');
+        return $this->hasMany(Address::class, 'person_id', 'id');
     }
 }
