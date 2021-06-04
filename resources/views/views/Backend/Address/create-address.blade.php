@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('title') {{ __('Dashboard') }} @endsection
+    @section('title') {{ __('Add Address') }} @endsection
     @section('css')  @endsection
     @section('js') @endsection
     @section('content')  @endsection
