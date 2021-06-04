@@ -3,9 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 //FRONTEND
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\Frontend\Home::class,'index']);
 
 //ADMIN ROUTES
 Route::middleware(['auth:sanctum', 'verified',])
@@ -14,7 +12,7 @@ Route::middleware(['auth:sanctum', 'verified',])
         //Dashboard
         Route::get('/', [App\Http\Controllers\Backend\DashboardController::class, 'render'])->name('dashboard.render');
         //Persons
-        Route::resource('/persons',App\Http\Controllers\Backend\PersonController::class)->except('show');
+        Route::resource('/persons', App\Http\Controllers\Backend\PersonController::class)->except('show');
         //Address
         Route::resource('/addresses', App\Http\Controllers\Backend\AddressController::class)->except('show');
     });
