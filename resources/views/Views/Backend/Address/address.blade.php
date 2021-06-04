@@ -20,7 +20,7 @@
         <div class="col-12 m-3">
             <div class="card">
                 <div class="header m-3">
-                    <a href="{{ route('person.add.render') }}"
+                    <a href="{{ route('addresses.create') }}"
                        class="pull-right btn btn-primary">
                         {{ __('Add Address') }}
                     </a>
@@ -58,12 +58,13 @@
                                             <td>
                                                 <div class="row">
                                                     <a class="btn btn-primary mr-1"
-                                                       href="{{ route('addresses.update',$address->id) }}">
+                                                       href="{{ route('addresses.edit',$address->id) }}">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                     <form action="{{ route('addresses.destroy',$address->id) }}"
                                                           method="post">
                                                         @csrf
+                                                        @method('DELETE')
                                                         <button type="submit"
                                                                 class="btn btn-danger">
                                                             <i class="fas fa-times"></i>
