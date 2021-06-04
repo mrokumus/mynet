@@ -16,8 +16,8 @@ class CreateBackendMenusTable extends Migration
         Schema::create('backend_menus', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
-            $table->string('icon');
+            $table->string('slug')->nullable();
+            $table->string('icon')->nullable();
             $table->boolean('has_sub_menu')->default(0);
             $table->integer('sub_menu_level')->default(1);
             $table->integer('sub_menu_id')->nullable();

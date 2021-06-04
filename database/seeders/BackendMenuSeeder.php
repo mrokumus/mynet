@@ -27,7 +27,7 @@ class BackendMenuSeeder extends Seeder
             [
                 'id' => 2,
                 'title' => 'Persons',
-                'slug' => 'persons',
+                'slug' => null,
                 'icon' => 'fas fa-user-friends',
                 'has_sub_menu' => 1,
                 'sub_menu_level' => 1,
@@ -36,8 +36,8 @@ class BackendMenuSeeder extends Seeder
             [
                 'id' => 3,
                 'title' => 'All Persons',
-                'slug' => 'persons/all',
-                'icon' => '',
+                'slug' => 'persons',
+                'icon' => null,
                 'has_sub_menu' => 0,
                 'sub_menu_level' => 2,
                 'sub_menu_id' => 2,
@@ -45,7 +45,7 @@ class BackendMenuSeeder extends Seeder
             [
                 'id' => 4,
                 'title' => 'Add Person',
-                'slug' => 'persons/add',
+                'slug' => 'persons/create',
                 'icon' => 'fas fa-user-plus',
                 'has_sub_menu' => 0,
                 'sub_menu_level' => 2,
@@ -54,7 +54,7 @@ class BackendMenuSeeder extends Seeder
             [
                 'id' => 5,
                 'title' => 'Addresses',
-                'slug' => 'addresses',
+                'slug' => null,
                 'icon' => 'fas fa-map-marked',
                 'has_sub_menu' => 1,
                 'sub_menu_level' => 1,
@@ -63,8 +63,8 @@ class BackendMenuSeeder extends Seeder
             [
                 'id' => 6,
                 'title' => 'All Addresses',
-                'slug' => 'addresses/all',
-                'icon' => '',
+                'slug' => 'addresses',
+                'icon' => null,
                 'has_sub_menu' => 0,
                 'sub_menu_level' => 2,
                 'sub_menu_id' => 5,
@@ -72,8 +72,8 @@ class BackendMenuSeeder extends Seeder
             [
                 'id' => 7,
                 'title' => 'Add Addresses',
-                'slug' => 'addresses/add',
-                'icon' => '',
+                'slug' => 'addresses/create',
+                'icon' => null,
                 'has_sub_menu' => 0,
                 'sub_menu_level' => 2,
                 'sub_menu_id' => 5,

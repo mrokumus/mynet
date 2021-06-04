@@ -19,7 +19,7 @@ class CreateAddressesTable extends Migration
             $table->string('post_code');
             $table->string('city_name', 255);
             $table->string('country_name', 255);
-            $table->bigInteger('person_Id')->unsigned();
+            $table->bigInteger('person_id')->unsigned();
             $table->foreign('person_id')->on('persons')->references('id')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
